@@ -1,0 +1,32 @@
+.navbar {
+  position: relative;
+  background-color: green;
+  display: flex;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding: 0.77rem;
+  border-bottom: 1px solid black;
+  align-items: center;
+}
+
+.navbarbrand {
+  padding: 0.5rem;
+  padding-left: 4rem;
+}
+
+.navbarlenght {
+  display: flex;
+  flex-basis: auto;
+  flex-grow: 1;
+  align-items: center;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}

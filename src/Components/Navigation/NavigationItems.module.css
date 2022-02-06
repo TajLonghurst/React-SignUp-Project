@@ -1,0 +1,18 @@
+.navbarnav {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.navitem {
+  list-style: none;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.navlink {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
