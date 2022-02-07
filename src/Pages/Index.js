@@ -1,8 +1,8 @@
-import Image from "../Images/HAY.jpg";
+import Hero from "../Components/Layout/Hero";
 import "../index.css";
 
 const Index = () => {
-  return <img className="img" src={Image} alt="IMGAE FAILED" />;
+  return <Hero />;
 };
 
 export default Index;

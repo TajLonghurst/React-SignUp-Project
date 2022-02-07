@@ -4,15 +4,23 @@
   margin-left: auto;
   padding-left: 2rem;
   padding-right: 2rem;
+  align-items: center;
 }
 
 .navitem {
   list-style: none;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  align-items: center;
 }
 
 .navlink {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
+  font-family: "Poppins-Bold";
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #000;
 }

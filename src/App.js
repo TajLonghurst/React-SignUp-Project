@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Navigation from "./Components/Navigation/Navigation";
 
 import Index from "./Pages/Index";
-import UserProfile from "./Pages/UserProfile";
+import AboutUs from "./Pages/AboutUs";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/UserProfile" element={<UserProfile />} />
+          <Route path="/AboutUs" element={<AboutUs />} />
         </Routes>
       </main>
     </Fragment>

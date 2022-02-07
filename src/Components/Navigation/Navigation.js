@@ -6,9 +6,11 @@ import NavigationItems from "./NavigationItems";
 
 const Navigation = () => {
   return (
-    <nav className={classes.navbar}>
-      <div className={classes.navbarbrand}>
-        <Link to="/">NAVBAR</Link>
+    <nav className={` ${classes.navbar}`}>
+      <div>
+        <Link className={classes.navbarbrand} to="/">
+          URBAN
+        </Link>
       </div>
       <div className={classes.navbarlenght}>
         <NavigationItems />

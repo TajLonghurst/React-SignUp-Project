@@ -8,6 +8,36 @@ body {
   background-color: #ffff;
 }
 
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url(/src/Fonts/Poppins-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url(/src/Fonts/Poppins-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Poppins-Black";
+  src: url(/src/Fonts/Poppins-Black.ttf) format("truetype");
+}
+
+.Poppins-Bold {
+  font-family: "Poppins-Bold";
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  font-size: 0.85rem;
+}
+.Poppins-Regular {
+  font-family: "Poppins-Regular";
+  font-size: 0.75rem;
+}
+.Poppins-Black {
+  font-family: "Poppins-Black";
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  font-size: 1rem;
+}
+
 .container,
 .container-fluid,
 .container-xxl,
@@ -15,11 +45,20 @@ body {
 .container-lg,
 .container-md,
 .container-sm {
-  width: 100%;
+  width: auto;
   padding-right: var(--bs-gutter-x, 0.75rem);
   padding-left: var(--bs-gutter-x, 0.75rem);
   margin-right: auto;
   margin-left: auto;
+  height: 100%;
+}
+.containervh {
+  width: auto;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+  height: 100vh;
 }
 
 @media (min-width: 576px) {
