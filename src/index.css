@@ -5,7 +5,19 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #ffff;
+}
+
+section {
+  transition: 1s ease-in-out;
+}
+
+.darkbackground {
+  /* background-image: linear-gradient(to right, #181818, #2b2b2b); */
+  background-color: #222222;
+}
+
+.whitebackground {
+  background-color: #cecece;
 }
 
 @font-face {
@@ -54,10 +66,6 @@ body {
 }
 .containervh {
   width: auto;
-  padding-right: var(--bs-gutter-x, 0.75rem);
-  padding-left: var(--bs-gutter-x, 0.75rem);
-  margin-right: auto;
-  margin-left: auto;
   height: 100vh;
 }
 
@@ -102,7 +110,7 @@ body {
   }
 }
 .row {
-  --bs-gutter-x: 1.5rem;
+  --bs-gutter-x: 0rem;
   --bs-gutter-y: 0;
   display: flex;
   flex-wrap: wrap;

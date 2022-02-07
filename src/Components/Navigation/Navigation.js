@@ -3,12 +3,19 @@ import { Link } from "react-router-dom";
 import classes from "./Navigation.module.css";
 import "../../index.css";
 import NavigationItems from "./NavigationItems";
+import { useSelector } from "react-redux";
 
 const Navigation = () => {
+  const toggle = useSelector((state) => state.ui.RegFormIsVisible);
+
+  const switchClasses = toggle
+    ? `${classes.whitenavbarbrand}`
+    : `${classes.darknavbarbrand}`;
+
   return (
-    <nav className={` ${classes.navbar}`}>
+    <nav className={classes.navbar}>
       <div>
-        <Link className={classes.navbarbrand} to="/">
+        <Link className={switchClasses} to="/">
           URBAN
         </Link>
       </div>

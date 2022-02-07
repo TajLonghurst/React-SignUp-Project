@@ -1,13 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = { SignUpFormIsVisible: false };
+const initialState = { RegFormIsVisible: false };
 
 const uiSlice = createSlice({
-  name: "SignUpForm",
+  name: "RegForm",
   initialState: initialState,
   reducers: {
-    toggleSignUpForm(state) {
-      state.SignUpFormIsVisible = !state.SignUpFormIsVisible;
+    toggleRegForm(state) {
+      state.RegFormIsVisible = !state.RegFormIsVisible;
     },
   },
 });

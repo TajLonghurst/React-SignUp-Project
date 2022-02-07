@@ -1,7 +1,18 @@
 import classes from "./Button.module.css";
+import { useSelector } from "react-redux";
 
 const Button = (props) => {
-  return <button className={classes.button}>{props.name}</button>;
+  const toggle = useSelector((state) => state.ui.RegFormIsVisible);
+
+  const toggleClasses = toggle
+    ? `${classes.whiteButton}`
+    : `${classes.darkButton}`;
+
+  return (
+    <button onClick={props.onClick} className={toggleClasses}>
+      {props.name}
+    </button>
+  );
 };
 
 export default Button;
