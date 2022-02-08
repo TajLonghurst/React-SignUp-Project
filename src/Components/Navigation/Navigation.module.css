@@ -19,7 +19,7 @@
   font-size: 2rem;
   text-decoration: none;
   color: #000;
-  transition: 1s;
+  transition: 2s;
 }
 
 .whitenavbarbrand {
@@ -30,7 +30,8 @@
   font-size: 2rem;
   text-decoration: none;
   color: #ffff;
-  transition: 1s;
+  transition: 2s;
+  transition-delay: 0.5s;
 }
 
 .navbarlenght {

@@ -8,7 +8,7 @@ body {
 }
 
 section {
-  transition: 1s ease-in-out;
+  transition: 1s linear;
 }
 
 .darkbackground {

@@ -24,7 +24,7 @@
   font-size: 0.9rem;
   text-decoration: none;
   color: #000;
-  transition: 1s;
+  transition: 2s;
 }
 
 .whitenavlink {
@@ -36,7 +36,8 @@
   font-size: 0.9rem;
   text-decoration: none;
   color: #ffffff;
-  transition: 1s;
+  transition: 2s;
+  transition-delay: 0.5s;
 }
 
 @media (max-width: 575px) {

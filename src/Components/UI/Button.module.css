@@ -11,8 +11,8 @@
   font-size: 0.9rem;
   text-decoration: none;
   color: #000;
-  transition: 1s;
   width: 100%;
+  transition: 2s;
 }
 
 .whiteButton {
@@ -28,8 +28,9 @@
   font-size: 0.9rem;
   text-decoration: none;
   color: #ffffff;
-  transition: 1s;
   width: 100%;
+  transition: 2s;
+  transition-delay: 0.5s;
 }
 
 .button:hover {
