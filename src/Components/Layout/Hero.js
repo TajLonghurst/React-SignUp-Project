@@ -3,7 +3,7 @@ import { Fragment } from "react";
 import "../../index.css";
 import classes from "../Layout/Hero.module.css";
 // import ImageBlueLady from "../../Images/BlueWhiteHeadSWL.png";
-import ImageRedLady from "../../Images/RedBlackHeadSWL.png";
+import ImageRedLady from "../../Assets/Images/RedBlackHeadSWL.png";
 
 const Hero = () => {
   return (
