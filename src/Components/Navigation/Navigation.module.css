@@ -65,6 +65,10 @@
     margin-left: 0rem;
     margin-right: 0rem;
   }
+  .navbarlenght {
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
 }
 
 @media (min-width: 575px) {
@@ -72,10 +76,14 @@
     padding: 0.5rem;
   }
   .darknavbarbrand {
-    padding-left: 1rem;
+    padding-left: 2rem;
   }
   .whitenavbarbrand {
-    padding-left: 1rem;
+    padding-left: 2rem;
+  }
+  .navbarlenght {
+    margin-left: 0rem;
+    margin-right: 0rem;
   }
 }
 @media (min-width: 768px) {
@@ -83,10 +91,10 @@
     padding: 0.5rem;
   }
   .darknavbarbrand {
-    padding-left: 2rem;
+    padding-left: 3rem;
   }
   .whitenavbarbrand {
-    padding-left: 2rem;
+    padding-left: 3rem;
   }
 }
 @media (min-width: 992px) {
@@ -94,10 +102,10 @@
     padding: 1rem;
   }
   .darknavbarbrand {
-    padding-left: 3rem;
+    padding-left: 5rem;
   }
   .whitenavbarbrand {
-    padding-left: 3rem;
+    padding-left: 5rem;
   }
 }
 @media (min-width: 1200px) {
@@ -105,10 +113,10 @@
     padding: 1rem;
   }
   .darknavbarbrand {
-    padding-left: 4rem;
+    padding-left: 6rem;
   }
   .whitenavbarbrand {
-    padding-left: 4rem;
+    padding-left: 6rem;
   }
 }
 @media (min-width: 1400px) {
@@ -116,9 +124,9 @@
     padding: 1rem;
   }
   .darknavbarbrand {
-    padding-left: 4rem;
+    padding-left: 6rem;
   }
   .whitenavbarbrand {
-    padding-left: 4rem;
+    padding-left: 6rem;
   }
 }

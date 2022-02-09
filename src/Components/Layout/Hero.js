@@ -2,7 +2,8 @@ import { Fragment } from "react";
 
 import "../../index.css";
 import classes from "../Layout/Hero.module.css";
-import ImageBlueLady from "../../Images/BlueWhiteHeadSWL.png";
+// import ImageBlueLady from "../../Images/BlueWhiteHeadSWL.png";
+import ImageRedLady from "../../Images/RedBlackHeadSWL.png";
 
 const Hero = () => {
   return (
@@ -12,7 +13,7 @@ const Hero = () => {
           <div className="col-xxl-7 col-xl-7 col-lg-12 col-md-12 col-sm-12">
             <img
               className={classes.imageSize}
-              src={ImageBlueLady}
+              src={ImageRedLady}
               alt="Failed to Load"
             />
           </div>

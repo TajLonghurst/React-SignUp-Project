@@ -22,15 +22,15 @@ section {
 
 @font-face {
   font-family: "Poppins-Bold";
-  src: url(/src/Fonts/Poppins-Bold.ttf) format("truetype");
+  src: url(/src/Assets/Fonts/Poppins-Bold.ttf) format("truetype");
 }
 @font-face {
   font-family: "Poppins-Regular";
-  src: url(/src/Fonts/Poppins-Regular.ttf) format("truetype");
+  src: url(/src/Assets/Fonts/Poppins-Regular.ttf) format("truetype");
 }
 @font-face {
   font-family: "Poppins-Black";
-  src: url(/src/Fonts/Poppins-Black.ttf) format("truetype");
+  src: url(/src/Assets/Fonts/Poppins-Black.ttf) format("truetype");
 }
 
 .Poppins-Bold {

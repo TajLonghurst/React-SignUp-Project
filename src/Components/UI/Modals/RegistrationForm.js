@@ -5,6 +5,7 @@ import { uiActions } from "../../../Store/ui-slice";
 import Button from "../Button";
 import classes from "./RegistrationForm.module.css";
 import "../../../index.css";
+import FormContainer from "../../Forms/FormContainer";
 
 const RegistrationForm = () => {
   const dispatch = useDispatch();
@@ -15,7 +16,7 @@ const RegistrationForm = () => {
   };
 
   const toggleForm = toggle ? `${classes.cardActive}` : `${classes.card}`;
-  const switchName = toggle ? "Close" : "Open";
+  const switchName = toggle ? "Close" : "Sign Up";
 
   return (
     <Fragment>
@@ -26,15 +27,8 @@ const RegistrationForm = () => {
               <Button onClick={RegClickHandler} name={switchName} />
             </div>
           </div>
-          {/* NewComponet */}
-          {/* <div className="container">
-            <div className="row">
-              <div className="col-6">
-                <p className={classes.center}>hay</p>
-              </div>
-              <div className="col-6">hay</div>
-            </div>
-          </div> */}
+          <FormContainer />
+          {/* <LogInForm/> */}
         </div>
       </div>
     </Fragment>
