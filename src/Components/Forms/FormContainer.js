@@ -1,7 +1,8 @@
 import { useSelector } from "react-redux";
 
-import SignUpForm from "./SignUpForm";
-import LogInForm from "./LogInForm";
+import LogInForm from "./LogInContent/LogInForm";
+import SignUpHeader from "./SignUpContent/SignUpHeader";
+import SignUpForm from "./SignUpContent/SignUpForm";
 import classes from "./FormContainer.module.css";
 import "../../index.css";
 
@@ -11,11 +12,13 @@ const FormContainer = () => {
   return (
     <div className={classes.container}>
       <div className="row">
-        <div className="col-6">
+        <div className="col-2"></div>
+        <div className="col-8">
+          <SignUpHeader />
           {FormIsActive && <SignUpForm />}
-          {/* <LogInForm /> */}
+          {/* {FormIsActive && <LogInForm />} */}
         </div>
-        <div className="col-6"></div>
+        <div className="col-2"></div>
       </div>
     </div>
   );

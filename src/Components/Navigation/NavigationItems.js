@@ -26,7 +26,7 @@ const NavigationItems = () => {
         </Link>
       </li>
       <li className={classes.navitem}>
-        <Button onClick={RegClickHandler} name={"Sign Up"} />
+        <Button onClick={RegClickHandler} name={"Log In"} />
       </li>
     </ul>
   );
