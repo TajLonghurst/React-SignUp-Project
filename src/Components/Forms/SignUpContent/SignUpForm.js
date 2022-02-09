@@ -12,11 +12,23 @@ const SignUpForm = () => {
     <div className="row">
       <div className={classes.container}>
         <form onSubmit={sumbitFormHandler} autoComplete="off">
-          <Input type={"text"} placeholder={"Enter your full name"} />
+          <Input
+            autoComplete={"name"}
+            type={"text"}
+            placeholder={"Enter your full name"}
+          />
           <p className={classes.errorMessage}>Error</p>
-          <Input type={"email"} placeholder={"Enter your email"} />
+          <Input
+            autoComplete={"email"}
+            type={"email"}
+            placeholder={"Enter your email"}
+          />
           <p className={classes.errorMessage}>Error</p>
-          <Input type={"password"} placeholder={"Enter your password"} />
+          <Input
+            autoComplete={"new-password"}
+            type={"password"}
+            placeholder={"Enter your password"}
+          />
           <p className={classes.errorMessage}>Error</p>
           <div className={classes.buttonContainer}>
             <Button name={"Submit"} type={"sumbit"} />

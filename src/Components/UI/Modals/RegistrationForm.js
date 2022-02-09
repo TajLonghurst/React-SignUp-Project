@@ -13,10 +13,11 @@ const RegistrationForm = () => {
 
   const RegClickHandler = () => {
     dispatch(uiActions.toggleRegForm());
+    dispatch(uiActions.isLogin());
   };
 
   const toggleForm = toggle ? `${classes.cardActive}` : `${classes.card}`;
-  const switchName = toggle ? "Close" : "Sign Up";
+  const switchName = toggle ? "Close" : "Log In";
 
   return (
     <Fragment>

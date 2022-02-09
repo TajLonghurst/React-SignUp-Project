@@ -12,7 +12,17 @@ const NavigationItems = () => {
 
   const RegClickHandler = () => {
     dispatch(uiActions.toggleRegForm());
+    dispatch(uiActions.isSignUp());
   };
+
+  let Click;
+
+  if (toggle) {
+    Click = null;
+  }
+  if (!toggle) {
+    Click = RegClickHandler;
+  }
 
   const switchClasses = toggle
     ? `${classes.whitenavlink}`
@@ -26,7 +36,7 @@ const NavigationItems = () => {
         </Link>
       </li>
       <li className={classes.navitem}>
-        <Button onClick={RegClickHandler} name={"Log In"} />
+        <Button onClick={Click} name={"Sign Up"} />
       </li>
     </ul>
   );
