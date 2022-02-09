@@ -9,7 +9,7 @@ const Button = (props) => {
     : `${classes.darkButton}`;
 
   return (
-    <button onClick={props.onClick} className={toggleClasses}>
+    <button onClick={props.onClick} type={props.type} className={toggleClasses}>
       {props.name}
     </button>
   );

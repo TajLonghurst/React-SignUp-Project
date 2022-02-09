@@ -3,3 +3,10 @@
   position: relative;
   text-align: center;
 }
+
+.buttonContainer {
+  position: relative;
+  text-align: start;
+  margin-left: 7.2%;
+  margin-top: 3rem;
+}
