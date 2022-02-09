@@ -10,3 +10,14 @@
   margin-left: 7.2%;
   margin-top: 3rem;
 }
+
+.errorMessage {
+  color: red;
+  margin: 0;
+  padding: 0;
+  text-align: start;
+  padding-left: 9%;
+  font-size: 14px;
+  display: block;
+  visibility: none;
+}

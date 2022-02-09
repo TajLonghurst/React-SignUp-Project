@@ -17,6 +17,7 @@
 
 .smallText {
   color: #fff;
+  margin: 0;
 }
 
 @media (max-width: 575px) {

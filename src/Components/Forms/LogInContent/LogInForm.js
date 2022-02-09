@@ -12,7 +12,9 @@ const LoginForm = () => {
       <div className={classes.container}>
         <form onSubmit={sumbitFormHandler} autoComplete="off">
           <Input type={"email"} placeholder={"Enter your email"} />
+          <p className={classes.errorMessage}>Error</p>
           <Input type={"password"} placeholder={"Enter your password"} />
+          <p className={classes.errorMessage}>Error</p>
           <div className={classes.buttonContainer}>
             <Button name={"Submit"} type={"sumbit"} />
           </div>
