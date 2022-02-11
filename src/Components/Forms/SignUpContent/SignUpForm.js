@@ -28,7 +28,7 @@ const SignUpForm = () => {
   } = useInput(isEmail);
 
   const {
-    value: entrePasswordValue,
+    value: entredPasswordValue,
     isValid: entredPasswordIsValid,
     hasError: entredPasswordHasError,
     valueChangeHandler: passwordChangeHandler,
@@ -49,7 +49,7 @@ const SignUpForm = () => {
       return; // will return nothing
     }
 
-    console.log(entredNameValue, entredEmaiValue, entrePasswordValue);
+    console.log(entredNameValue, entredEmaiValue, entredPasswordValue);
 
     resetNameInput();
     resetEmailInput();
@@ -100,7 +100,7 @@ const SignUpForm = () => {
             autoComplete={"new-password"}
             type={"password"}
             placeholder={"Enter your password"}
-            value={entrePasswordValue}
+            value={entredPasswordValue}
             onBlur={passwordBlurHandler}
             onChange={passwordChangeHandler}
             hasError={entredPasswordHasError}
