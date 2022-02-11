@@ -110,6 +110,8 @@ const SignUpForm = () => {
           </p>
           <div className={classes.buttonContainer}>
             <Button name={"Submit"} type={"sumbit"} />
+
+            {/* Add an onClick to button so that it displays a better error style in the button componet */}
           </div>
         </form>
       </div>
