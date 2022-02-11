@@ -1,4 +1,4 @@
-.inputForm {
+.input {
   width: 80%;
   background-color: transparent;
   outline: none;
@@ -13,7 +13,7 @@
   border-radius: 0px;
 }
 
-.inputFormError {
+.inputError {
   width: 80%;
   background-color: transparent;
   outline: none;
