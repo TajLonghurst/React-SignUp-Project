@@ -1,12 +1,9 @@
+import React from "react";
 import "../../../index.css";
 import Button from "../../UI/Button";
 import Input from "../../UI/Input";
 import classes from "./SignUpForm.module.css";
 import useInput from "../../../Hooks/use-Input";
-
-const isNotEmpty = (value) => value.trim() !== "";
-const isEmail = (value) => value.includes("@");
-const isPassword = (value) => value.length >= 6;
 
 const SignUpForm = () => {
   const {
@@ -16,7 +13,7 @@ const SignUpForm = () => {
     valueChangeHandler: nameChangeHandler,
     inputBlurHandler: nameBlurHandler,
     resetInput: resetNameInput,
-  } = useInput(isNotEmpty);
+  } = useInput("Name");
 
   const {
     value: entredEmaiValue,
@@ -25,7 +22,7 @@ const SignUpForm = () => {
     valueChangeHandler: emailChangeHandler,
     inputBlurHandler: emailBlurHandler,
     resetInput: resetEmailInput,
-  } = useInput(isEmail);
+  } = useInput("Email");
 
   const {
     value: entredPasswordValue,
@@ -34,7 +31,7 @@ const SignUpForm = () => {
     valueChangeHandler: passwordChangeHandler,
     inputBlurHandler: passwordBlurHandler,
     resetInput: resetPasswordInput,
-  } = useInput(isPassword);
+  } = useInput("Password");
 
   const sumbitFormHandler = (event) => {
     event.preventDefault();
@@ -94,7 +91,7 @@ const SignUpForm = () => {
             hasError={entredEmailHasError}
           />
           <p className={emailInputHasError}>
-            Please Include an @ to your email
+            Your email should be a proper email
           </p>
           <Input
             autoComplete={"new-password"}
@@ -106,7 +103,8 @@ const SignUpForm = () => {
             hasError={entredPasswordHasError}
           />
           <p className={passwordInputHasError}>
-            Please make sure your password includes 6 or more characters
+            Your password should contain a capatial letter a number and 8 or
+            more characters.
           </p>
           <div className={classes.buttonContainer}>
             <Button name={"Submit"} type={"sumbit"} />
