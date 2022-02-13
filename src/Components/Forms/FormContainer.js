@@ -1,8 +1,8 @@
 import SignUp from "./SignUp";
 import LogIn from "./LogIn";
 import classes from "./FormContainer.module.css";
-import "../../index.css";
 import { useSelector } from "react-redux";
+import "../../index.css";
 
 const FormContainer = () => {
   const FormIsActive = useSelector((state) => state.ui.RegFormIsVisible);

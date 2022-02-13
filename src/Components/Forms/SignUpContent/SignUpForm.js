@@ -5,7 +5,7 @@ import Input from "../../UI/Input";
 import classes from "./SignUpForm.module.css";
 import useInput from "../../../Hooks/use-Input";
 
-const SignUpForm = () => {
+const SignUpForm = (props) => {
   const {
     value: entredNameValue,
     isValid: entredNameIsValid,
@@ -33,6 +33,8 @@ const SignUpForm = () => {
     resetInput: resetPasswordInput,
   } = useInput("Password");
 
+  //https:identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyB3y818Ygi0vgqBs5a-566AYxql_sUSy9I
+
   const sumbitFormHandler = (event) => {
     event.preventDefault();
 
@@ -43,10 +45,11 @@ const SignUpForm = () => {
     }
 
     if (!formIsValid) {
-      return; // will return nothing
-    }
+      return;
+    } // will return nothing
 
     console.log(entredNameValue, entredEmaiValue, entredPasswordValue);
+    props.onEnterDetails(entredEmaiValue, entredPasswordValue);
 
     resetNameInput();
     resetEmailInput();
