@@ -30,7 +30,7 @@ const useHttp = () => {
       console.log("Worked in use-https.js hook");
       console.log();
 
-      const responseData = await response.json();
+      // const responseData = await response.json();
     } catch (err) {
       setError(err.message || "Something Went Wrong!");
       alert(err);
