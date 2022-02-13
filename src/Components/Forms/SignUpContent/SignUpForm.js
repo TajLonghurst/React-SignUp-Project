@@ -48,7 +48,6 @@ const SignUpForm = (props) => {
       return;
     } // will return nothing
 
-    console.log(entredNameValue, entredEmaiValue, entredPasswordValue);
     props.onEnterDetails(entredEmaiValue, entredPasswordValue);
 
     resetNameInput();

@@ -21,7 +21,6 @@ const SignUp = () => {
         "Content-Type": "application/json",
       },
     });
-    console.log("WORKED IN SIGNUPREQUEST // SignUp.js");
   };
 
   return (
