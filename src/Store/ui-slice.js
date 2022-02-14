@@ -4,10 +4,11 @@ const initialState = {
   RegFormIsVisible: false,
   SignUpForm: false,
   LoginForm: false,
+  ErrorMessageIs: null,
 };
 
 const uiSlice = createSlice({
-  name: "RegForm",
+  name: "UI",
   initialState: initialState,
   reducers: {
     toggleRegForm(state) {
@@ -20,6 +21,10 @@ const uiSlice = createSlice({
     isSignUp(state) {
       state.SignUpForm = true;
       state.LoginForm = false;
+    },
+    isError(state, action) {
+      const errerStatus = action.payload;
+      state.ErrorMessageIs = errerStatus.boolean;
     },
   },
 });
