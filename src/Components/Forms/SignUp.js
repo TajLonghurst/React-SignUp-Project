@@ -8,7 +8,6 @@ const SignUp = () => {
   const { isLoading, error, sendRequest: sendSignUpRequest } = useHttp();
 
   const SignUpRequest = async (enteredEmail, enteredPassword) => {
-    console.log(process.env);
     sendSignUpRequest({
       method: "POST",
       url: `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${process.env.REACT_APP_SIGNUP_FIREBASE_KEY}`,
