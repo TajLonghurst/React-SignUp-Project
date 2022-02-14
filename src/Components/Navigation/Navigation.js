@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import classes from "./Navigation.module.css";
-import "../../index.css";
 import NavigationItems from "./NavigationItems";
 import { useSelector } from "react-redux";
+import "../../index.css";
 
 const Navigation = () => {
   const toggle = useSelector((state) => state.ui.RegFormIsVisible);

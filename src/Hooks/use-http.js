@@ -5,8 +5,6 @@ const useHttp = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  //My FireB key AIzaSyB3y818Ygi0vgqBs5a-566AYxql_sUSy9I
-
   const sendRequest = useCallback(async (requestConfig) => {
     setIsLoading(true);
     setError(null);
@@ -30,8 +28,8 @@ const useHttp = () => {
 
       // const responseData = await response.json();
     } catch (err) {
-      setError(err.message || "Something Went Wrong!");
-      alert(err);
+      setError();
+      alert(err.message || "Something Went Wrong!");
     }
     setIsLoading(false);
   }, []);

@@ -4,8 +4,12 @@ import Button from "../../UI/Button";
 import Input from "../../UI/Input";
 import classes from "./SignUpForm.module.css";
 import useInput from "../../../Hooks/use-Input";
+import { useDispatch } from "react-redux";
+import { uiActions } from "../../../Store/ui-slice";
 
 const SignUpForm = (props) => {
+  const dispatch = useDispatch();
+
   const {
     value: entredNameValue,
     isValid: entredNameIsValid,
@@ -33,8 +37,6 @@ const SignUpForm = (props) => {
     resetInput: resetPasswordInput,
   } = useInput("Password");
 
-  //https:identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyB3y818Ygi0vgqBs5a-566AYxql_sUSy9I
-
   const sumbitFormHandler = (event) => {
     event.preventDefault();
 
@@ -49,6 +51,9 @@ const SignUpForm = (props) => {
     } // will return nothing
 
     props.onEnterDetails(entredEmaiValue, entredPasswordValue);
+
+    //use if useHttps redux error state to let the form close or not
+    dispatch(uiActions.toggleRegForm());
 
     resetNameInput();
     resetEmailInput();

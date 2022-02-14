@@ -3,8 +3,11 @@ import Input from "../../UI/Input";
 import classes from "./LogInForm.module.css";
 import Button from "../../UI/Button";
 import useInput from "../../../Hooks/use-Input";
+import { useDispatch } from "react-redux";
+import { uiActions } from "../../../Store/ui-slice";
 
 const LoginForm = () => {
+  const dispatch = useDispatch();
   const {
     value: entredEmailValue,
     isValid: entredEmailIsValid,
@@ -37,6 +40,7 @@ const LoginForm = () => {
     }
 
     console.log(entredEmailValue, entredPasswordValue);
+    dispatch(uiActions.toggleRegForm());
 
     resetEmailInput();
     resetPasswordInput();
