@@ -30,7 +30,8 @@ const dropIn = {
 };
 
 const FormStatusMessage = () => {
-  const isError = useSelector((state) => state.ui.ErrorMessageIs);
+  const isError = useSelector((state) => state.ui.ErrorIs);
+  const ErrorMsg = useSelector((state) => state.ui.ErrorMsg);
   const [isAnimated, setIsisAnimated] = useState(false);
 
   useEffect(() => {
@@ -57,9 +58,7 @@ const FormStatusMessage = () => {
             exit="exit"
           >
             <MdError className={classes.cardIcon} />
-            <p className={classes.cardText}>
-              Sign up form failed try again later
-            </p>
+            <p className={classes.cardText}>{ErrorMsg}</p>
           </motion.div>
         )}
       </AnimatePresence>

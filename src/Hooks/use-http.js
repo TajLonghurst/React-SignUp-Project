@@ -2,15 +2,17 @@ import axios from "axios";
 import { useCallback, useState } from "react";
 import { useDispatch } from "react-redux";
 import { uiActions } from "../Store/ui-slice";
+import useHandleErrors from "./use-handleErrors";
 
 const useHttp = () => {
   const dispatch = useDispatch();
   const [isLoading, setIsLoading] = useState(false);
+  const { state: errorState, handleErrors: Errors } = useHandleErrors();
 
   const sendRequest = useCallback(
     async (requestConfig) => {
       setIsLoading(true);
-      dispatch(uiActions.isError({ boolean: null }));
+      dispatch(uiActions.isError({ boolean: false, msg: null }));
 
       const axiosMethod = requestConfig.method;
       const axiosUrl = requestConfig.url;
@@ -34,22 +36,22 @@ const useHttp = () => {
         }
         console.log(response);
       } catch (err) {
-        /* --------------------------------- handle --------------------------------- */
         const error = err.response.data.error.message;
 
-        if (error === "EMAIL_EXISTS") {
-          console.log("Email has already been used");
-        }
-        alert(error);
-        /* --------------------------------- handle --------------------------------- */
+        Errors({
+          type: error,
+        });
 
-        dispatch(uiActions.isError({ boolean: true, errorMsg: "Failed" }));
+        const { msg } = errorState;
+
+        dispatch(uiActions.isError({ boolean: true, msg: msg }));
+
         if (typeOfHttp === "RegForm") {
           dispatch(uiActions.toggleRegForm());
         }
       }
     },
-    [dispatch]
+    [dispatch, Errors, errorState]
   );
 
   return { isLoading, sendRequest };

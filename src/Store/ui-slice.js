@@ -4,7 +4,8 @@ const initialState = {
   RegFormIsVisible: false,
   SignUpForm: false,
   LoginForm: false,
-  ErrorMessageIs: null,
+  ErrorIs: false,
+  ErrorMsg: null,
 };
 
 const uiSlice = createSlice({
@@ -19,12 +20,12 @@ const uiSlice = createSlice({
       state.SignUpForm = false;
     },
     isSignUp(state) {
-      state.SignUpForm = true;
       state.LoginForm = false;
+      state.SignUpForm = true;
     },
     isError(state, action) {
-      const errerStatus = action.payload;
-      state.ErrorMessageIs = errerStatus.boolean;
+      state.ErrorIs = action.payload.boolean;
+      state.ErrorMsg = action.payload.msg;
     },
   },
 });
