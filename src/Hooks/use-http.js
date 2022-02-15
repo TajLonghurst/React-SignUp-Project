@@ -43,7 +43,7 @@ const useHttp = () => {
         });
 
         const { msg } = errorState;
-
+        // ^^^^ This is because ErrorState returns all of the useReducers stats.  {msg: "", type:""}
         dispatch(uiActions.isError({ boolean: true, msg: msg }));
 
         if (typeOfHttp === "RegForm") {
