@@ -1,6 +1,8 @@
 import classes from "./FormStatusMessage.module.css";
 import { MdError } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
+import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
 
 const dropIn = {
   hidden: {
@@ -28,8 +30,16 @@ const dropIn = {
 };
 
 const FormStatusMessage = () => {
-  const OHere = true;
-  const PHere = false;
+  const isError = useSelector((state) => state.ui.ErrorMessageIs);
+  const [isAnimated, setIsisAnimated] = useState(false);
+
+  useEffect(() => {
+    if (isError) {
+      const timer = setTimeout(() => setIsisAnimated(false), 3000);
+      setIsisAnimated(true);
+      return () => clearTimeout(timer);
+    }
+  }, [isError]);
 
   return (
     <div className={classes.container}>
@@ -38,7 +48,7 @@ const FormStatusMessage = () => {
         exitBeforeEnter={true}
         onExitComplete={() => null}
       >
-        {OHere && (
+        {isAnimated && (
           <motion.div
             className={classes.cardBodyWhite}
             variants={dropIn}

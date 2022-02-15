@@ -6,12 +6,11 @@ import { uiActions } from "../Store/ui-slice";
 const useHttp = () => {
   const dispatch = useDispatch();
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
 
   const sendRequest = useCallback(
     async (requestConfig) => {
       setIsLoading(true);
-      setError(null);
+      dispatch(uiActions.isError({ boolean: null }));
 
       const axiosMethod = requestConfig.method;
       const axiosUrl = requestConfig.url;
@@ -19,6 +18,8 @@ const useHttp = () => {
         ? JSON.stringify(requestConfig.data)
         : null;
       const axiosHeaders = requestConfig.headers ? requestConfig.headers : {};
+
+      const typeOfHttp = requestConfig.typeOfHttp;
 
       try {
         const response = await axios({
@@ -28,23 +29,30 @@ const useHttp = () => {
           headers: axiosHeaders,
         });
 
-        if (response) {
+        if (response && typeOfHttp === "RegForm") {
           dispatch(uiActions.toggleRegForm());
         }
-
         console.log(response);
-
-        // const responseData = await response.json();
       } catch (err) {
-        setError(true);
-        alert(err.message || "Something Went Wrong!");
-        dispatch(uiActions.toggleRegForm());
+        /* --------------------------------- handle --------------------------------- */
+        const error = err.response.data.error.message;
+
+        if (error === "EMAIL_EXISTS") {
+          console.log("Email has already been used");
+        }
+        alert(error);
+        /* --------------------------------- handle --------------------------------- */
+
+        dispatch(uiActions.isError({ boolean: true, errorMsg: "Failed" }));
+        if (typeOfHttp === "RegForm") {
+          dispatch(uiActions.toggleRegForm());
+        }
       }
     },
     [dispatch]
   );
 
-  return { isLoading, error, sendRequest };
+  return { isLoading, sendRequest };
 };
 
 export default useHttp;
