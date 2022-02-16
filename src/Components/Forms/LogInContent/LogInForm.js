@@ -5,8 +5,9 @@ import Button from "../../UI/Button";
 import useInput from "../../../Hooks/use-Input";
 import { useDispatch } from "react-redux";
 import { uiActions } from "../../../Store/ui-slice";
+import Loader from "../../UI/Loader";
 
-const LoginForm = () => {
+const LoginForm = (props) => {
   const dispatch = useDispatch();
   const {
     value: entredEmailValue,
@@ -83,6 +84,7 @@ const LoginForm = () => {
             Your password should contain a capatial letter a number and 8 or
             more characters.
           </p>
+          <Loader isLoading={props.isLoading} />
           <div className={classes.buttonContainer}>
             <Button name={"Log In"} type={"sumbit"} />
           </div>
