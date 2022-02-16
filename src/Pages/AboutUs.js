@@ -3,7 +3,7 @@ import { Fragment } from "react";
 const AboutUs = () => {
   return (
     <Fragment>
-      <p>hay</p>
+      <div>AboutUs</div>
     </Fragment>
   );
 };

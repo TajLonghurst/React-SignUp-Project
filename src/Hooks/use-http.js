@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useCallback, useState } from "react";
 import { useDispatch } from "react-redux";
+import { authActions } from "../Store/auth-slice";
 import { uiActions } from "../Store/ui-slice";
 import useHandleErrors from "./use-handleErrors";
 
@@ -35,8 +36,20 @@ const useHttp = () => {
           dispatch(uiActions.toggleRegForm());
         }
 
-        console.log(response);
+        /* ------------------------------ Getting Data ------------------------------ */
+        const { idToken, email, expiresIn, localId, refreshToken } =
+          response.data;
 
+        dispatch(
+          authActions.Login({
+            idToken: idToken,
+            email: email,
+            expiresIn: expiresIn,
+            localId: localId,
+            refreshToken: refreshToken,
+          })
+        );
+        /* ------------------------------ Getting Data ------------------------------ */
         dispatch(
           uiActions.isFormNotification({ isSuccses: true, msg: "Succsess" })
         );

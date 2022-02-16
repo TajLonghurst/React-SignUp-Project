@@ -13,6 +13,12 @@ const reducer = (state, action) => {
   if (action.type === "INVALID_PASSWORD") {
     state.msg = "Password is incorrect";
   }
+  if (action.type === "EMAIL_NOT_FOUND") {
+    state.msg = "This Email does not exisist";
+  }
+  if (action.type === "USER_DISABLED") {
+    state.msg = "This Email has been disabled by an administrator";
+  }
 };
 
 const initialState = {
