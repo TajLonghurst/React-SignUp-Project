@@ -4,11 +4,14 @@ import { useDispatch } from "react-redux";
 import { authActions } from "../Store/auth-slice";
 import { uiActions } from "../Store/ui-slice";
 import useHandleErrors from "./use-handleErrors";
+import useHandleSuccessful from "./use-handleSucssful";
 
 const useHttp = () => {
   const dispatch = useDispatch();
   const [isLoading, setIsLoading] = useState(false);
   const { state: errorState, handleErrors: Errors } = useHandleErrors();
+  const { state: succsessState, handleSuccess: Succsess } =
+    useHandleSuccessful();
 
   const sendRequest = useCallback(
     async (requestConfig) => {
@@ -21,8 +24,7 @@ const useHttp = () => {
         ? JSON.stringify(requestConfig.data)
         : null;
       const axiosHeaders = requestConfig.headers ? requestConfig.headers : {};
-
-      const typeOfHttp = requestConfig.typeOfHttp;
+      const typeOfRequest = requestConfig.typeOfRequest;
 
       try {
         const response = await axios({
@@ -31,10 +33,6 @@ const useHttp = () => {
           data: axiosData,
           headers: axiosHeaders,
         });
-
-        if (response && typeOfHttp === "RegForm") {
-          dispatch(uiActions.toggleRegForm());
-        }
 
         /* ------------------------------ Getting Data ------------------------------ */
         const { idToken, email, expiresIn, localId, refreshToken } =
@@ -50,28 +48,33 @@ const useHttp = () => {
           })
         );
         /* ------------------------------ Getting Data ------------------------------ */
-        dispatch(
-          uiActions.isFormNotification({ isSuccses: true, msg: "Succsess" })
-        );
+
+        /* ----------------------- Handeling Succsess messages ---------------------- */
+        if (response && (typeOfRequest === "SIGNUP" || "LOGIN")) {
+          dispatch(uiActions.toggleRegForm());
+        }
+        Succsess({
+          type: typeOfRequest,
+        });
+        const { msg } = succsessState;
+        dispatch(uiActions.isFormNotification({ isSuccses: true, msg: msg }));
+        /* ----------------------- Handeling Succsess messages ---------------------- */
       } catch (err) {
+        /* ------------------------- Handling Error messages ------------------------ */
+        if (typeOfRequest === "SIGNUP" || "LOGIN") {
+          dispatch(uiActions.toggleRegForm());
+        }
         const error = err.response.data.error.message;
-
         console.log(error);
-
         Errors({
           type: error,
         });
-
         const { msg } = errorState;
-        // ^^^^ This is because ErrorState returns all of the useReducers stats.  {msg: "", type:""}
         dispatch(uiActions.isFormNotification({ ErrorIs: true, msg: msg }));
-
-        if (typeOfHttp === "RegForm") {
-          dispatch(uiActions.toggleRegForm());
-        }
+        /* ------------------------- Handling Error messages ------------------------ */
       }
     },
-    [dispatch, Errors, errorState]
+    [dispatch, Errors, Succsess, errorState, succsessState]
   );
 
   return { isLoading, sendRequest };

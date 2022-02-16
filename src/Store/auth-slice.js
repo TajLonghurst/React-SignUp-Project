@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialToken = localStorage.getItem("idToken");
-const isThereToken = !!initialToken;
+const isTokenTrue = !!initialToken;
 
 const initialState = {
   idToken: initialToken,
@@ -9,7 +9,7 @@ const initialState = {
   expiresIn: null,
   localId: null,
   refreshToken: null,
-  isLoggedIn: isThereToken,
+  isLoggedIn: isTokenTrue,
 };
 
 const authSlice = createSlice({

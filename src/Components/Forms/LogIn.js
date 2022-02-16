@@ -8,7 +8,7 @@ const LogIn = () => {
 
   const LoginRequest = async (enteredEmail, enteredPassword) => {
     sendLoginRequest({
-      typeOfHttp: "RegForm",
+      typeOfRequest: "LOGIN",
       method: "POST",
       url: `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${process.env.REACT_APP_SIGNUP_FIREBASE_KEY}`,
       data: {

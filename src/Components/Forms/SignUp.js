@@ -9,7 +9,7 @@ const SignUp = () => {
 
   const SignUpRequest = async (enteredEmail, enteredPassword) => {
     sendSignUpRequest({
-      typeOfHttp: "RegForm",
+      typeOfRequest: "SIGNUP",
       method: "POST",
       url: `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${process.env.REACT_APP_SIGNUP_FIREBASE_KEY}`,
       data: {
