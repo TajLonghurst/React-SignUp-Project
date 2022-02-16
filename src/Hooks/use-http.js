@@ -34,6 +34,7 @@ const useHttp = () => {
         if (response && typeOfHttp === "RegForm") {
           dispatch(uiActions.toggleRegForm());
         }
+
         console.log(response);
 
         dispatch(
@@ -41,6 +42,8 @@ const useHttp = () => {
         );
       } catch (err) {
         const error = err.response.data.error.message;
+
+        console.log(error);
 
         Errors({
           type: error,

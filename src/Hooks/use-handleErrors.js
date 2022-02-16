@@ -10,11 +10,14 @@ const reducer = (state, action) => {
   if (action.type === "TOO_MANY_ATTEMPTS_TRY_LATER") {
     state.msg = "Too many attemptys, try again later";
   }
+  if (action.type === "INVALID_PASSWORD") {
+    state.msg = "Password is incorrect";
+  }
 };
 
 const initialState = {
   type: null,
-  msg: "Form failed to work, Try again later",
+  msg: "Form failed to work, Try again",
 };
 
 const useHandleErrors = () => {
