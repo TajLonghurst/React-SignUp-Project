@@ -4,6 +4,7 @@ import Button from "../../UI/Button";
 import Input from "../../UI/Input";
 import classes from "./SignUpForm.module.css";
 import useInput from "../../../Hooks/use-Input";
+import Loader from "../../UI/Loader";
 
 const SignUpForm = (props) => {
   const {
@@ -108,10 +109,9 @@ const SignUpForm = (props) => {
             Your password should contain a capatial letter a number and 8 or
             more characters.
           </p>
+          <Loader isLoading={props.isLoading} />
           <div className={classes.buttonContainer}>
-            <Button name={"Submit"} type={"sumbit"} />
-
-            {/* Add an onClick to button so that it displays a better error style in the button componet */}
+            <Button name={"sumbit"} type={"sumbit"} />
           </div>
         </form>
       </div>

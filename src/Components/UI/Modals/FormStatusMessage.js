@@ -1,8 +1,10 @@
 import classes from "./FormStatusMessage.module.css";
-import { MdError } from "react-icons/md";
+import { MdError, MdCheckCircle } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
-import { useSelector } from "react-redux";
-import { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { Fragment, useEffect, useState } from "react";
+import { uiActions } from "../../../Store/ui-slice";
+import Overlay from "./Overlay";
 
 const dropIn = {
   hidden: {
@@ -13,8 +15,8 @@ const dropIn = {
     y: "0vh",
     opacity: 1,
     transition: {
-      delay: 0.9,
-      duration: 1,
+      delay: 0.5,
+      duration: 1.2,
       ease: "easeOut",
       timeConstant: 200,
     },
@@ -23,46 +25,96 @@ const dropIn = {
     y: "5vh",
     opacity: 0,
     transition: {
-      duration: 1,
+      duration: 0.3,
       ease: "easeOut",
     },
   },
 };
 
 const FormStatusMessage = () => {
-  const isError = useSelector((state) => state.ui.ErrorIs);
-  const ErrorMsg = useSelector((state) => state.ui.ErrorMsg);
   const [isAnimated, setIsisAnimated] = useState(false);
+  const [overlayAnimated, setOverlayAnimated] = useState(false);
+  const [isOverlayAnimated, setIsOverlayAnimated] = useState(false);
+  const isError = useSelector((state) => state.ui.ErrorIs);
+  const isSuccses = useSelector((state) => state.ui.isSuccses);
+  const ErrorMsg = useSelector((state) => state.ui.ErrorMsg);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    if (isError) {
+    if (isSuccses) {
       const timer = setTimeout(() => setIsisAnimated(false), 3000);
       setIsisAnimated(true);
       return () => clearTimeout(timer);
     }
-  }, [isError]);
+    if (isError) {
+      setIsisAnimated(true);
+    }
+  }, [isError, isSuccses]);
+
+  useEffect(() => {
+    if (overlayAnimated) {
+      const timer = setTimeout(() => {
+        setIsOverlayAnimated(true);
+        setOverlayAnimated(false);
+      }, 100);
+      setIsOverlayAnimated(false);
+      return () => clearTimeout(timer);
+    }
+  }, [overlayAnimated]);
+
+  const btnOnClickhandler = () => {
+    setIsisAnimated(false);
+    dispatch(uiActions.toggleRegForm());
+    dispatch(uiActions.isFormNotification({ ErrorIs: false }));
+  };
+
+  const OverlayOnclickHandler = () => {
+    setOverlayAnimated(true);
+  };
+
+  const errorIcon = <MdError className={classes.errorCardIcon} />;
+  const succsesIcon = <MdCheckCircle className={classes.succsesCardIcon} />;
+
+  const overlayClasses = isOverlayAnimated
+    ? `${classes.cardBodyWhiteAnimated}`
+    : `${classes.cardBodyWhite}`;
 
   return (
-    <div className={classes.container}>
+    <Fragment>
       <AnimatePresence
         initial={false}
         exitBeforeEnter={true}
         onExitComplete={() => null}
       >
-        {isAnimated && (
-          <motion.div
-            className={classes.cardBodyWhite}
-            variants={dropIn}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-          >
-            <MdError className={classes.cardIcon} />
-            <p className={classes.cardText}>{ErrorMsg}</p>
-          </motion.div>
-        )}
+        {isError && <Overlay onClick={OverlayOnclickHandler} />}
       </AnimatePresence>
-    </div>
+
+      <div className={classes.container}>
+        <AnimatePresence
+          initial={false}
+          exitBeforeEnter={true}
+          onExitComplete={() => null}
+        >
+          {isAnimated && (
+            <motion.div
+              className={overlayClasses}
+              variants={dropIn}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+            >
+              {isError ? errorIcon : succsesIcon}
+              <p className={classes.cardText}>{ErrorMsg}</p>
+              {isError && (
+                <button className={classes.Button} onClick={btnOnClickhandler}>
+                  ok
+                </button>
+              )}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    </Fragment>
   );
 };
 

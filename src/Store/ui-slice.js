@@ -6,6 +6,7 @@ const initialState = {
   LoginForm: false,
   ErrorIs: false,
   ErrorMsg: null,
+  isSuccses: false,
 };
 
 const uiSlice = createSlice({
@@ -23,9 +24,10 @@ const uiSlice = createSlice({
       state.LoginForm = false;
       state.SignUpForm = true;
     },
-    isError(state, action) {
-      state.ErrorIs = action.payload.boolean;
+    isFormNotification(state, action) {
+      state.ErrorIs = action.payload.ErrorIs;
       state.ErrorMsg = action.payload.msg;
+      state.isSuccses = action.payload.isSuccses;
     },
   },
 });

@@ -12,7 +12,7 @@ const useHttp = () => {
   const sendRequest = useCallback(
     async (requestConfig) => {
       setIsLoading(true);
-      dispatch(uiActions.isError({ boolean: false, msg: null }));
+      dispatch(uiActions.isFormNotification({ ErrorIs: false, msg: null }));
 
       const axiosMethod = requestConfig.method;
       const axiosUrl = requestConfig.url;
@@ -35,6 +35,10 @@ const useHttp = () => {
           dispatch(uiActions.toggleRegForm());
         }
         console.log(response);
+
+        dispatch(
+          uiActions.isFormNotification({ isSuccses: true, msg: "Succsess" })
+        );
       } catch (err) {
         const error = err.response.data.error.message;
 
@@ -44,7 +48,7 @@ const useHttp = () => {
 
         const { msg } = errorState;
         // ^^^^ This is because ErrorState returns all of the useReducers stats.  {msg: "", type:""}
-        dispatch(uiActions.isError({ boolean: true, msg: msg }));
+        dispatch(uiActions.isFormNotification({ ErrorIs: true, msg: msg }));
 
         if (typeOfHttp === "RegForm") {
           dispatch(uiActions.toggleRegForm());

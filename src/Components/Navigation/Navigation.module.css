@@ -8,7 +8,7 @@
   top: 0;
   right: 0;
   left: 0;
-  z-index: 1030;
+  z-index: 1000;
 }
 
 .darknavbarbrand {
@@ -41,14 +41,6 @@
   align-items: center;
   margin-left: 3rem;
   margin-right: 3rem;
-}
-
-.fixedtop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1030;
 }
 
 @media (max-width: 575px) {

@@ -3,7 +3,7 @@
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 2;
+  z-index: 1002;
   user-select: none; /* supported by Chrome and Opera */
   -webkit-user-select: none; /* Safari */
   -khtml-user-select: none; /* Konqueror HTML */
@@ -23,8 +23,8 @@
   color: #000;
 }
 
-.cardBodyDark {
-  background-color: #161616d0;
+.cardBodyWhiteAnimated {
+  background-color: #ffffff5d;
   padding: 0.9rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -32,7 +32,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  color: #fff;
+  color: #000;
+  animation: bump 300ms ease-out;
 }
 
 .cardText {
@@ -49,7 +50,7 @@
   -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
-.cardIcon {
+.errorCardIcon {
   flex-direction: column;
   margin: 0;
   width: 2rem;
@@ -59,4 +60,50 @@
   -khtml-user-select: none; /* Konqueror HTML */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
+}
+.succsesCardIcon {
+  flex-direction: column;
+  margin: 0;
+  width: 2rem;
+  height: 2rem;
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  color: #000;
+}
+
+.Button {
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #000;
+  border-radius: 50px;
+  padding: 0.3rem 1.5rem;
+  font-family: "Poppins-Bold";
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #000;
+  transition: 2s;
+}
+
+@keyframes bump {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.9);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
