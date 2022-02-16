@@ -1,11 +1,10 @@
 import { Fragment } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { uiActions } from "../../../Store/ui-slice";
-
+import FormContainer from "../../Forms/FormContainer";
 import Button from "../Button";
 import classes from "./RegistrationForm.module.css";
 import "../../../index.css";
-import FormContainer from "../../Forms/FormContainer";
 
 const RegistrationForm = () => {
   const dispatch = useDispatch();
