@@ -7,7 +7,7 @@ import useWindowSize from "../../Hooks/use-windowSize";
 import "../../index.css";
 
 const Navigation = () => {
-  const { windowSize: width } = useWindowSize();
+  const { windowSize: width, isMobileView: moblie } = useWindowSize();
   const toggle = useSelector((state) => state.ui.RegFormIsVisible);
 
   const switchClasses = toggle
@@ -22,7 +22,8 @@ const Navigation = () => {
         </Link>
       </div>
       <div className={classes.navbarlenght}>
-        <NavigationItems />
+        {!moblie && <NavigationItems />}
+        {moblie && <p>bar</p>}
       </div>
     </nav>
   );

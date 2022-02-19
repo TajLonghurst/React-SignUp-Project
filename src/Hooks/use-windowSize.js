@@ -13,7 +13,9 @@ const useWindowSize = () => {
     };
   }, []);
 
-  return { windowSize: windowSize };
+  const isMobileView = windowSize <= 575;
+
+  return { windowSize, isMobileView };
 };
 
 export default useWindowSize;
