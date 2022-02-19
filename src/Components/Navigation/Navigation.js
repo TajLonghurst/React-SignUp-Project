@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import classes from "./Navigation.module.css";
 import NavigationItems from "./NavigationItems";
 import { useSelector } from "react-redux";
+import useWindowSize from "../../Hooks/use-windowSize";
 import "../../index.css";
 
 const Navigation = () => {
+  const { windowSize: width } = useWindowSize();
   const toggle = useSelector((state) => state.ui.RegFormIsVisible);
 
   const switchClasses = toggle

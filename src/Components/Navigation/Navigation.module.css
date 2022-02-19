@@ -43,7 +43,15 @@
   margin-right: 3rem;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 320px) {
+  .darknavbarbrand {
+    padding-left: 5rem;
+    font-size: 1.5rem;
+  }
+  .whitenavbarbrand {
+    padding-left: 5rem;
+    font-size: 1.5rem;
+  }
   .navbar {
     padding: 0.5rem;
   }
