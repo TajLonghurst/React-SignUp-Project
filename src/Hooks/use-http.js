@@ -50,20 +50,20 @@ const useHttp = () => {
         /* ------------------------------ Getting Data ------------------------------ */
 
         /* ----------------------- Handeling Succsess messages ---------------------- */
-        if (response && (typeOfRequest === "SIGNUP" || "LOGIN")) {
-          dispatch(uiActions.toggleRegForm());
-        }
         Succsess({
           type: typeOfRequest,
         });
+
         const { msg } = succsessState;
+
         dispatch(uiActions.isFormNotification({ isSuccses: true, msg: msg }));
+
+        if (response && (typeOfRequest === "SIGNUP" || "LOGIN")) {
+          dispatch(uiActions.toggleRegForm({ activeType: false }));
+        }
         /* ----------------------- Handeling Succsess messages ---------------------- */
       } catch (err) {
         /* ------------------------- Handling Error messages ------------------------ */
-        if (typeOfRequest === "SIGNUP" || "LOGIN") {
-          dispatch(uiActions.toggleRegForm());
-        }
         const error = err.response.data.error.message;
         console.log(error);
         Errors({
@@ -71,6 +71,9 @@ const useHttp = () => {
         });
         const { msg } = errorState;
         dispatch(uiActions.isFormNotification({ ErrorIs: true, msg: msg }));
+        if (typeOfRequest === "SIGNUP" || "LOGIN") {
+          dispatch(uiActions.toggleRegForm({ activeType: false }));
+        }
         /* ------------------------- Handling Error messages ------------------------ */
       }
     },
