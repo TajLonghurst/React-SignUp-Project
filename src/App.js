@@ -1,13 +1,15 @@
 import React, { Fragment } from "react";
-import { Route, Routes, Navigate } from "react-router-dom";
+import { Route, Routes, Navigate, useLocation } from "react-router-dom";
 import Navigation from "./Components/Navigation/Navigation";
 import { useSelector } from "react-redux";
 import Index from "./Pages/Index";
 import Aboutus from "./Pages/Aboutus";
 import { RegForm } from "./Components/UI/Modals";
 import Profile from "./Pages/Profile";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
+  const location = useLocation();
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
   const toggle = useSelector((state) => state.ui.RegFormIsVisible);
 
@@ -18,12 +20,18 @@ function App() {
       <section className={switchClasses}>
         <Navigation />
         <main>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/aboutus" element={<Aboutus />} />
-            {isLoggedIn && <Route path="/profile" element={<Profile />} />}
-            <Route path="*" element={<Navigate to="/" />} />
-          </Routes>
+          <AnimatePresence
+            initial={false}
+            exitBeforeEnter={true}
+            onExitComplete={() => null}
+          >
+            <Routes key={location.pathname} location={location}>
+              <Route path="/" element={<Index />} />
+              <Route path="/aboutus" element={<Aboutus />} />
+              {isLoggedIn && <Route path="/profile" element={<Profile />} />}
+              <Route path="*" element={<Navigate to="/" />} />
+            </Routes>
+          </AnimatePresence>
         </main>
         <RegForm />
       </section>

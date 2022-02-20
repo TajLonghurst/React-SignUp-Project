@@ -16,8 +16,9 @@ const useWindowSize = () => {
   }, []);
 
   const isMobileView = windowWidthSize <= 767;
+  const isDesktopView = windowWidthSize >= 1200;
 
-  return { windowHightSize, windowWidthSize, isMobileView };
+  return { windowHightSize, windowWidthSize, isMobileView, isDesktopView };
 };
 
 export default useWindowSize;

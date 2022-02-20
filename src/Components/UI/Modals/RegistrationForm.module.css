@@ -8,6 +8,7 @@
   transform: translate(-50%);
   background: #ffffff5d;
   transition: 0.8s;
+  z-index: 2;
 }
 
 .cardcontent {
@@ -37,6 +38,7 @@
   transform: translate(-50%);
   background: #272727d0;
   transition: 0.8s;
+  z-index: 2;
 }
 
 @media (max-width: 320px) {

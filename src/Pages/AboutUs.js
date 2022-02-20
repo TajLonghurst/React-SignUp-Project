@@ -1,9 +1,10 @@
+import AboutUsHero from "../Components/Layout/AboutUsHero";
 import { Fragment } from "react";
 
 const AboutUs = () => {
   return (
     <Fragment>
-      <div>AboutUs</div>
+      <AboutUsHero />
     </Fragment>
   );
 };
