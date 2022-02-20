@@ -1,6 +1,14 @@
-.icon {
+.iconDark {
   width: 1.3rem;
   height: 1.3rem;
+  color: #000;
+  transition: 2s;
+}
+.iconWhite {
+  width: 1.3rem;
+  height: 1.3rem;
+  color: #2c2c2c;
+  transition: 2s;
 }
 .iconLayout {
   display: flex;
