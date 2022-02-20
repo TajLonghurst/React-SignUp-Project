@@ -31,4 +31,6 @@ function App() {
   );
 }
 
+//use rafce snippet for quick arrow funtion component
+
 export default App;

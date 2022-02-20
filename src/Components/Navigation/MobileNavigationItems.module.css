@@ -1,0 +1,14 @@
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+.navbarnav {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  align-items: center;
+}

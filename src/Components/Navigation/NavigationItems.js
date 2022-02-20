@@ -5,7 +5,6 @@ import { authActions } from "../../Store/auth-slice";
 import { useNavigate } from "react-router-dom";
 import classes from "./NavigationItems.module.css";
 import Button from "../../Components/UI/Button.js";
-import "../../index.css";
 
 const NavigationItems = () => {
   const navigation = useNavigate();

@@ -39,8 +39,8 @@
   flex-basis: auto;
   flex-grow: 1;
   align-items: center;
-  margin-left: 3rem;
-  margin-right: 3rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 @media (max-width: 320px) {

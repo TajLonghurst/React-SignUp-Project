@@ -5,9 +5,10 @@ import NavigationItems from "./NavigationItems";
 import { useSelector } from "react-redux";
 import useWindowSize from "../../Hooks/use-windowSize";
 import "../../index.css";
+import MobileNavigationItems from "./MobileNavigationItems";
 
 const Navigation = () => {
-  const { windowSize: width, isMobileView: moblie } = useWindowSize();
+  const { isMobileView: moblie } = useWindowSize();
   const toggle = useSelector((state) => state.ui.RegFormIsVisible);
 
   const switchClasses = toggle
@@ -23,7 +24,7 @@ const Navigation = () => {
       </div>
       <div className={classes.navbarlenght}>
         {!moblie && <NavigationItems />}
-        {moblie && <p>bar</p>}
+        {moblie && <MobileNavigationItems />}
       </div>
     </nav>
   );

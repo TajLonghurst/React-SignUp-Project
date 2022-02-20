@@ -7,14 +7,19 @@ const initialState = {
   ErrorIs: false,
   ErrorMsg: null,
   isSuccses: false,
+  isMobileNavigation: false,
 };
 
 const uiSlice = createSlice({
   name: "UI",
   initialState: initialState,
   reducers: {
-    toggleRegForm(state) {
-      state.RegFormIsVisible = !state.RegFormIsVisible;
+    toggleRegForm(state, action) {
+      if (action.payload) {
+        state.RegFormIsVisible = action.payload.activeType;
+      } else {
+        state.RegFormIsVisible = !state.RegFormIsVisible;
+      }
     },
     isLogin(state) {
       state.LoginForm = true;
@@ -28,6 +33,9 @@ const uiSlice = createSlice({
       state.ErrorIs = action.payload.ErrorIs;
       state.ErrorMsg = action.payload.msg;
       state.isSuccses = action.payload.isSuccses;
+    },
+    toggleMoblieNavigation(state, action) {
+      state.isMobileNavigation = action.payload.activeType;
     },
   },
 });
