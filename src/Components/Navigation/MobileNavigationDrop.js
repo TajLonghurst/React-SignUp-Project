@@ -22,20 +22,14 @@ const MobileNavigationDrop = () => {
       dispatch(authActions.Logout());
       navigation("/");
     }
+    if (isOpened) {
+      dispatch(uiActions.toggleMoblieNavigation({ activeType: false }));
+    }
   };
 
   const closeOnClickHandler = () => {
     dispatch(uiActions.toggleMoblieNavigation({ activeType: false }));
   };
-
-  let Click;
-
-  if (toggle) {
-    Click = null;
-  }
-  if (!toggle) {
-    Click = RegClickHandler;
-  }
 
   const switchClasses = toggle
     ? `${classes.whitenavlink}`
@@ -78,7 +72,7 @@ const MobileNavigationDrop = () => {
               </Link>
             </li>
             <li className={classes.navitem}>
-              <Button onClick={Click} name={switchName} />
+              <Button onClick={RegClickHandler} name={switchName} />
             </li>
           </ul>
         </div>
