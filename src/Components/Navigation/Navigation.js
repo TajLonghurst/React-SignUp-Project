@@ -4,8 +4,8 @@ import classes from "./Navigation.module.css";
 import NavigationItems from "./NavigationItems";
 import { useSelector } from "react-redux";
 import useWindowSize from "../../Hooks/use-windowSize";
-import "../../index.css";
 import MobileNavigationItems from "./MobileNavigationItems";
+import "../../index.css";
 
 const Navigation = () => {
   const { isMobileView: moblie } = useWindowSize();

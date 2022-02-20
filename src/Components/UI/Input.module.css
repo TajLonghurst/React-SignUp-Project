@@ -66,3 +66,66 @@ select:-webkit-autofill:focus {
   box-shadow: 0 0 0px 1000px #202020 inset;
   /* transition: background-color 5000s ease-in-out 0s; */
 }
+
+@media (max-width: 320px) {
+  .input {
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: 2.2rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.2rem;
+  }
+  .inputError {
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: 2.2rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.2rem;
+  }
+}
+@media (min-width: 320px) {
+  .input {
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: 2.2rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.2rem;
+  }
+  .inputError {
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: 2.2rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.2rem;
+  }
+}
+@media (min-width: 575px) {
+  .input {
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: 3rem;
+    margin-top: 0.6rem;
+    margin-bottom: 0rem;
+  }
+  .inputError {
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: 3rem;
+    margin-top: 0.6rem;
+    margin-bottom: 0rem;
+  }
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 1400px) {
+}

@@ -63,11 +63,45 @@
     margin-right: 0.5rem;
   }
 }
-
+@media (min-width: 320px) {
+  .darknavlink {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    letter-spacing: 0px;
+    font-size: 0.5rem;
+  }
+  .whitenavlink {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    letter-spacing: 0px;
+    font-size: 0.5rem;
+  }
+  .navbarnav {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    margin: 0.2rem;
+  }
+  .navitem {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+}
 @media (min-width: 575px) {
   .navbarnav {
     padding-left: 0rem;
     padding-right: 0rem;
+  }
+  .darknavlink {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    letter-spacing: 0px;
+    font-size: 0.9rem;
+  }
+  .whitenavlink {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    letter-spacing: 0px;
+    font-size: 0.9rem;
   }
 }
 @media (min-width: 768px) {

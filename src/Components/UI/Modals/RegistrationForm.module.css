@@ -39,7 +39,19 @@
   transition: 0.8s;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 320px) {
+  .card {
+    width: 90vw;
+  }
+  .cardActive {
+    width: 90vw;
+  }
+  .cardcontent {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+@media (min-width: 320px) {
   .card {
     width: 90vw;
   }

@@ -10,3 +10,44 @@
   position: relative;
   text-align: left;
 }
+
+@media (max-width: 320px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .policyText {
+    color: #999;
+    font-size: 9px;
+    line-height: 1.5em;
+  }
+}
+@media (min-width: 320px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .policyText {
+    color: #999;
+    font-size: 9px;
+    line-height: 1.5em;
+  }
+}
+@media (min-width: 575px) {
+  .policyText {
+    font-size: 11px;
+    line-height: 1.5em;
+  }
+  .container {
+    padding-left: 4.3rem;
+    padding-right: 4.3rem;
+  }
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 1400px) {
+}

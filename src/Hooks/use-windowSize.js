@@ -15,7 +15,7 @@ const useWindowSize = () => {
     };
   }, []);
 
-  const isMobileView = windowWidthSize <= 575;
+  const isMobileView = windowWidthSize <= 767;
 
   return { windowHightSize, windowWidthSize, isMobileView };
 };

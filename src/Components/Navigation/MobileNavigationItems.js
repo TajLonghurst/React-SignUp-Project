@@ -4,11 +4,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { MdDehaze, MdClear } from "react-icons/md";
 import { uiActions } from "../../Store/ui-slice";
 import classes from "./MobileNavigationItems.module.css";
+import { AnimatePresence } from "framer-motion";
 import "../../index.css";
 
 const MobileNavigationItems = () => {
   const dispatch = useDispatch();
   const toggleMobileNav = useSelector((state) => state.ui.isMobileNavigation);
+  const toggle = useSelector((state) => state.ui.RegFormIsVisible);
 
   const mobileonClickHandler = () => {
     if (toggleMobileNav) {
@@ -19,16 +21,24 @@ const MobileNavigationItems = () => {
     }
   };
 
+  const switchClasses = toggle ? `${classes.iconWhite}` : `${classes.iconDark}`;
+
   const switchIcons = toggleMobileNav ? (
-    <MdClear onClick={mobileonClickHandler} className={classes.icon} />
+    <MdClear onClick={mobileonClickHandler} className={switchClasses} />
   ) : (
-    <MdDehaze onClick={mobileonClickHandler} className={classes.icon} />
+    <MdDehaze onClick={mobileonClickHandler} className={switchClasses} />
   );
 
   return (
     <Fragment>
       <ul className={classes.navbarnav}>{switchIcons}</ul>
-      {toggleMobileNav && <MobileNavigationDrop />}
+      <AnimatePresence
+        initial={false}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}
+      >
+        {toggleMobileNav && <MobileNavigationDrop />}
+      </AnimatePresence>
     </Fragment>
   );
 };

@@ -9,10 +9,15 @@ import "../../../index.css";
 const RegistrationForm = () => {
   const dispatch = useDispatch();
   const toggle = useSelector((state) => state.ui.RegFormIsVisible);
+  const isMobileView = useSelector((state) => state.ui.isMobileNavigation);
 
   const RegClickHandler = () => {
-    dispatch(uiActions.toggleRegForm());
-    dispatch(uiActions.isLogin());
+    if (!isMobileView) {
+      dispatch(uiActions.toggleRegForm());
+      dispatch(uiActions.isLogin());
+    } else {
+      return;
+    }
   };
 
   const toggleForm = toggle ? `${classes.cardActive}` : `${classes.card}`;

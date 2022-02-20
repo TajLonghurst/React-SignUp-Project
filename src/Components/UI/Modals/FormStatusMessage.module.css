@@ -9,6 +9,7 @@
   -khtml-user-select: none; /* Konqueror HTML */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
+  display: inline;
 }
 
 .cardBodyWhite {
@@ -21,6 +22,7 @@
   flex-direction: row;
   align-items: center;
   color: #000;
+  justify-content: center;
 }
 
 .cardBodyWhiteAnimated {
@@ -33,6 +35,7 @@
   flex-direction: row;
   align-items: center;
   color: #000;
+  justify-content: center;
   animation: bump 300ms ease-out;
 }
 
@@ -60,6 +63,7 @@
   -khtml-user-select: none; /* Konqueror HTML */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
+  color: #000;
 }
 .succsesCardIcon {
   flex-direction: column;
@@ -106,4 +110,45 @@
   100% {
     transform: scale(1);
   }
+}
+
+@media (max-width: 320px) {
+  .container {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+  .cardText {
+    font-size: 12px;
+    font-family: "Poppins-Regular";
+  }
+  .cardBodyWhiteAnimated {
+    padding: 0.9rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+@media (min-width: 320px) {
+  .container {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+  .cardText {
+    font-size: 12px;
+    font-family: "Poppins-Regular";
+  }
+  .cardBodyWhiteAnimated {
+    padding: 0.9rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+@media (min-width: 575px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 1400px) {
 }

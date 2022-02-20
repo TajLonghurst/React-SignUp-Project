@@ -38,15 +38,17 @@ const useHttp = () => {
         const { idToken, email, expiresIn, localId, refreshToken } =
           response.data;
 
-        dispatch(
-          authActions.Login({
-            idToken: idToken,
-            email: email,
-            expiresIn: expiresIn,
-            localId: localId,
-            refreshToken: refreshToken,
-          })
-        );
+        if (typeOfRequest === "LOGIN") {
+          dispatch(
+            authActions.Login({
+              idToken: idToken,
+              email: email,
+              expiresIn: expiresIn,
+              localId: localId,
+              refreshToken: refreshToken,
+            })
+          );
+        }
         /* ------------------------------ Getting Data ------------------------------ */
 
         /* ----------------------- Handeling Succsess messages ---------------------- */

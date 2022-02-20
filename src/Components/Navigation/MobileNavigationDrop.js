@@ -6,6 +6,30 @@ import { useNavigate } from "react-router-dom";
 import classes from "./MobileNavigationDrop.module.css";
 import Button from "../../Components/UI/Button.js";
 import { Fragment } from "react";
+import { motion } from "framer-motion";
+
+const dropIn = {
+  hidden: {
+    y: "-20vh",
+    opacity: 0,
+  },
+  visible: {
+    y: "0vh",
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+  exit: {
+    y: "-20vh",
+    opacity: 0,
+    transition: {
+      duration: 0.2,
+      ease: "easeIn",
+    },
+  },
+};
 
 const MobileNavigationDrop = () => {
   const navigation = useNavigate();
@@ -39,8 +63,15 @@ const MobileNavigationDrop = () => {
 
   return (
     <Fragment>
+      <div className={classes.overlay}></div>
       <div className={classes.dropbody}>
-        <div className={classes.container}>
+        <motion.div
+          className={classes.container}
+          variants={dropIn}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+        >
           <ul className={classes.navbarnav}>
             <li className={classes.navitem}>
               <Link
@@ -75,7 +106,7 @@ const MobileNavigationDrop = () => {
               <Button onClick={RegClickHandler} name={switchName} />
             </li>
           </ul>
-        </div>
+        </motion.div>
       </div>
     </Fragment>
   );

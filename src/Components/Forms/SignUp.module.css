@@ -6,3 +6,22 @@
   margin-left: auto;
   height: 100%;
 }
+
+@media (max-width: 320px) {
+  .container {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+}
+@media (min-width: 320px) {
+}
+@media (min-width: 575px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 1400px) {
+}

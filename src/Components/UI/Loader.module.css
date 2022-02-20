@@ -6,7 +6,6 @@
   z-index: 5;
   visibility: none;
 }
-
 .ldsEllipsisHidden {
   position: relative;
   display: inline-block;
@@ -71,4 +70,37 @@
   100% {
     transform: translate(24px, 0);
   }
+}
+
+@media (max-width: 320px) {
+  .ldsEllipsis {
+    position: relative;
+    display: inline-block;
+    top: 0%;
+    padding-bottom: 2rem;
+    left: -3rem;
+    z-index: 5;
+    visibility: none;
+  }
+  .ldsEllipsisHidden {
+    position: relative;
+    display: inline-block;
+    top: 0%;
+    padding-bottom: 2rem;
+    left: -3rem;
+    z-index: 5;
+    visibility: hidden;
+  }
+}
+@media (min-width: 320px) {
+}
+@media (min-width: 575px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 1400px) {
 }
