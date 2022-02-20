@@ -109,6 +109,10 @@
     padding-left: 0rem;
     padding-right: 0rem;
   }
+  .navitem {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
 }
 @media (min-width: 992px) {
   .navbarnav {

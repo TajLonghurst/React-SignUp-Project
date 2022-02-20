@@ -5,22 +5,23 @@ import { motion } from "framer-motion";
 import classes from "./AboutUsHero.module.css";
 import useWindowSize from "../../Hooks/use-windowSize";
 import "../../index.css";
+import AboutUs from "../AboutUsContent/AboutUs";
 
 const pageTranstion = {
   hidden: {
-    x: "-41.6vw",
+    x: "-41.65vw",
   },
   visible: {
     x: "0vw",
     transition: {
-      duration: 2,
+      duration: 0.7,
       ease: "easeInOut",
     },
   },
   exit: {
-    x: "-41.6vw",
+    x: "-41.65vw",
     transition: {
-      duration: 2,
+      duration: 0.7,
       ease: "easeInOut",
     },
   },
@@ -32,7 +33,9 @@ const AboutsUsHero = () => {
     <Fragment>
       <div className="containervh">
         <div className="row">
-          <div className="col-xxl-5 col-xl-5 col-lg-12 col-md-12 col-sm-12"></div>
+          <div className="col-xxl-5 col-xl-5 col-lg-12 col-md-12 col-sm-12">
+            <AboutUs />
+          </div>
           {isActive && (
             <motion.div
               variants={pageTranstion}
