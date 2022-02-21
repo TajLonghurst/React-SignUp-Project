@@ -16,8 +16,7 @@
   margin: 0;
   color: #000;
   padding: 1rem;
-  font-family: "Poppins-Bold";
-  text-transform: uppercase;
+  font-family: "HALIMUN-REGULAR";
   letter-spacing: 0px;
   transition: 2s;
 }
@@ -32,8 +31,7 @@
   margin: 0;
   color: #2c2c2c;
   padding: 1rem;
-  font-family: "Poppins-Bold";
-  text-transform: uppercase;
+  font-family: "HALIMUN-REGULAR";
   letter-spacing: 0px;
   transition: 2s;
 }
@@ -42,4 +40,190 @@
   margin: 0rem;
   color: #2c2c2c;
   transition: 2s;
+}
+
+@media (max-width: 320px) {
+  .container {
+    max-width: 100%;
+    margin: 0rem;
+    margin-top: 10rem;
+    margin-left: 0rem;
+  }
+  .cardBody {
+    display: inline-block;
+    justify-content: center;
+    text-align: start;
+    padding: 0rem;
+    width: 100%;
+  }
+  .headerDark {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+  .headerWhite {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+  .smallTextWhite {
+    padding-left: 1rem;
+    margin: 0rem;
+    transition: 2s;
+  }
+  .smallTextDark {
+    padding-left: 1rem;
+    margin: 0rem;
+    color: #000;
+    transition: 2s;
+  }
+}
+@media (min-width: 320px) {
+  .container {
+    max-width: 100%;
+    margin: 0rem;
+    margin-top: 10rem;
+    margin-left: 0rem;
+  }
+  .cardBody {
+    display: inline-block;
+    justify-content: center;
+    text-align: start;
+    padding: 0rem;
+    width: 100%;
+  }
+  .headerDark {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+  .headerWhite {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+  .smallTextWhite {
+    padding-left: 1rem;
+    margin: 0rem;
+    transition: 2s;
+  }
+  .smallTextDark {
+    padding-left: 1rem;
+    margin: 0rem;
+    color: #000;
+    transition: 2s;
+  }
+}
+@media (min-width: 575px) {
+  .container {
+    max-width: 100%;
+    margin: 1rem;
+    margin-top: 10rem;
+    margin-left: 0rem;
+  }
+  .cardBody {
+    display: inline-block;
+    justify-content: center;
+    text-align: start;
+    padding: 1rem;
+    width: 90%;
+  }
+  .headerDark {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+  .headerWhite {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+  .smallTextWhite {
+    padding-left: 1rem;
+    margin: 0rem;
+    transition: 2s;
+  }
+  .smallTextDark {
+    padding-left: 1rem;
+    margin: 0rem;
+    color: #000;
+    transition: 2s;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 100%;
+    margin: 1rem;
+    margin-top: 10rem;
+    margin-left: 4rem;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 100%;
+    margin: 1rem;
+    margin-top: 10rem;
+    margin-left: 7rem;
+  }
+  .cardBody {
+    display: inline-block;
+    justify-content: center;
+    text-align: start;
+    padding: 1rem;
+    width: 70%;
+  }
+  .headerDark {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+  .headerWhite {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+  .smallTextWhite {
+    padding-left: 1rem;
+    margin: 0rem;
+    transition: 2s;
+  }
+  .smallTextDark {
+    padding-left: 1rem;
+    margin: 0rem;
+    color: #000;
+    transition: 2s;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 100%;
+    margin: 1rem;
+    margin-top: 11rem;
+    margin-left: 5rem;
+  }
+  .cardBody {
+    display: inline-block;
+    width: 100%;
+    justify-content: center;
+    text-align: start;
+    padding: 1rem;
+  }
+  .headerDark {
+    font-size: 3rem;
+    margin: 0;
+    color: #000;
+    padding: 1rem;
+    font-family: "HALIMUN-REGULAR";
+    letter-spacing: 0px;
+    transition: 2s;
+  }
+  .headerWhite {
+    font-size: 3rem;
+    margin: 0;
+    color: #2c2c2c;
+    padding: 1rem;
+    font-family: "HALIMUN-REGULAR";
+    letter-spacing: 0px;
+    transition: 2s;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 100%;
+    margin: 1rem;
+    margin-top: 14rem;
+    margin-left: 7rem;
+  }
 }

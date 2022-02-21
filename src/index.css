@@ -35,6 +35,11 @@ section {
   src: url(/src/Assets/Fonts/Poppins-Black.ttf) format("truetype");
   font-display: auto;
 }
+@font-face {
+  font-family: "Halimun-Regular";
+  src: url(/src/Assets/Fonts/Halimun.ttf) format("truetype");
+  font-display: auto;
+}
 
 .Poppins-Bold {
   font-family: "Poppins-Bold";
@@ -51,6 +56,9 @@ section {
   text-transform: uppercase;
   letter-spacing: 0px;
   font-size: 1rem;
+}
+.Halimun-Regular {
+  font-family: "Halimun-Regular";
 }
 
 .container,

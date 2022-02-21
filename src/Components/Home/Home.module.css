@@ -1,0 +1,161 @@
+.container {
+  max-width: 100%;
+  margin: 1rem;
+  margin-top: 14rem;
+  margin-right: 10rem;
+}
+.cardBody {
+  display: inline-block;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+}
+.headerDark {
+  font-size: 3rem;
+  margin: 0;
+  color: #000;
+  padding: 1rem;
+  font-family: "HALIMUN-REGULAR";
+  letter-spacing: 0px;
+  transition: 2s;
+}
+.smallTextDark {
+  padding-left: 1rem;
+  margin: 0rem;
+  color: #000;
+  transition: 2s;
+  font-family: "Poppins-Bold";
+  letter-spacing: 0px;
+  font-size: 1rem;
+  text-align: start;
+  margin-left: 2.5rem;
+}
+.headerWhite {
+  font-size: 3rem;
+  margin: 0;
+  color: #2c2c2c;
+  padding: 1rem;
+  font-family: "HALIMUN-REGULAR";
+  letter-spacing: 0px;
+  transition: 2s;
+}
+.smallTextWhite {
+  padding-left: 1rem;
+  margin: 0rem;
+  color: #2c2c2c;
+  transition: 2s;
+  font-family: "Poppins-Bold";
+  letter-spacing: 0px;
+  text-align: start;
+  margin-left: 2.5rem;
+}
+
+@media (max-width: 320px) {
+  .cardBody {
+    display: block;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 0rem;
+  }
+  .container {
+    max-width: 100%;
+    margin: 0rem;
+    margin-top: 12rem;
+    margin-right: 0rem;
+  }
+  .headerWhite {
+    width: 100%;
+    font-size: 3rem;
+    padding: 1rem;
+  }
+  .headerDark {
+    font-size: 3rem;
+    padding: 1rem;
+  }
+}
+@media (min-width: 320px) {
+  .cardBody {
+    display: block;
+    justify-content: center;
+    text-align: center;
+    padding: 0rem;
+  }
+  .container {
+    max-width: 100%;
+    margin: 0rem;
+    margin-top: 12rem;
+    margin-right: 0rem;
+  }
+  .headerWhite {
+    font-size: 3rem;
+    padding: 1rem;
+  }
+  .headerDark {
+    font-size: 3rem;
+    padding: 1rem;
+  }
+}
+@media (min-width: 575px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+  .cardBody {
+    display: block;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+  }
+  .container {
+    max-width: 100%;
+    margin: 0rem;
+    margin-top: 15rem;
+    margin-right: 5rem;
+  }
+  .headerWhite {
+    font-size: 2.5rem;
+    padding: 1rem;
+  }
+  .headerDark {
+    font-size: 2.5rem;
+    padding: 1rem;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 100%;
+    margin: 1rem;
+    margin-top: 20rem;
+    margin-right: 10rem;
+  }
+  .headerDark {
+    font-size: 3rem;
+    margin: 0;
+    color: #000;
+    padding: 1rem;
+    font-family: "HALIMUN-REGULAR";
+    letter-spacing: 0px;
+    transition: 2s;
+  }
+  .headerWhite {
+    font-size: 3rem;
+    margin: 0;
+    color: #2c2c2c;
+    padding: 1rem;
+    font-family: "HALIMUN-REGULAR";
+    letter-spacing: 0px;
+    transition: 2s;
+  }
+  .cardBody {
+    display: inline-block;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+  }
+}
