@@ -13,7 +13,7 @@ const textContentTranstion = {
     y: "0vw",
     opacity: 1,
     transition: {
-      delay: 1,
+      delay: 0.2,
       duration: 1,
       ease: "easeOut",
     },
