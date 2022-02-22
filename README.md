@@ -1,4 +1,36 @@
-## React-Signup-Project
+## React Sign Up Project
+
+The purpose of this project is to demonstrate my capabilities of building a Sign Up & Log In webpage using React.js. 
+
+
+
+
+
+
+
+
+
+
+<h3 align="left">Technology stack:</h3>
+
+<p align="left"> 
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> 
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" alt="redux" width="40" height="40"/>
+<img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40" height="40"/> 
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/>
+</p>
+  
+<h3 align="left">Third party libarys:</h3>
+
+- Framer-Motion
+- React-Router-Dom
+- Axios
+- React-Icons
+
+  
+  
+  
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
