@@ -1,15 +1,6 @@
 ## React Sign Up Project
 
-The purpose of this project is to demonstrate my capabilities of building a Sign Up & Log In webpage using React.js. 
-
-
-
-
-
-
-
-
-
+The purpose of this project is to demonstrate my capabilities of building a Sign Up & Log In webpage using React.js.
 
 <h3 align="left">Technology stack:</h3>
 
@@ -26,11 +17,6 @@ The purpose of this project is to demonstrate my capabilities of building a Sign
 - React-Router-Dom
 - Axios
 - React-Icons
-
-  
-  
-  
-
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
