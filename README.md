@@ -24,7 +24,3 @@ The purpose of this project is to demonstrate my capabilities of building a **Si
 ## React & Redux Features
 - **React:** UseState, UseEffect, UseReducer, UseCallback, CustomHooks, Module.css, Props, CreatePortal
 - **Redux:** UseSelector, useDispatch, ConfigureStore, CreateSlice
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
