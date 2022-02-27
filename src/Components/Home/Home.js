@@ -69,6 +69,7 @@ const Home = () => {
           initial="hidden"
           animate="visible"
         ></motion.p> */}
+        <p className={classes.nowshowingText}>NOW SHOWING</p>
         <h1 className={switchHeaderClasses}>Shades of Mind</h1>
         <HomeParagraph />
       </div>

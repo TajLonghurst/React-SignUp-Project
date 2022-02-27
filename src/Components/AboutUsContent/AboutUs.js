@@ -72,7 +72,7 @@ const AboutUs = () => {
         >
           Location
         </motion.p>
-        <h1 className={switchHeaderClasses}>About Us</h1>
+        <h1 className={switchHeaderClasses}>About us</h1>
         <AboutUsParagraph />
       </div>
       <AboutUsIcons />

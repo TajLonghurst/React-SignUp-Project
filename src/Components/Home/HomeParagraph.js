@@ -32,7 +32,7 @@ const HomeParagraph = () => {
       animate="visible"
     >
       <p className={switchClasses}>
-        An exploration in form, physique and colors
+        An exploration in form, physique and colour
       </p>
     </motion.div>
   );
