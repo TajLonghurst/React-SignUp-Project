@@ -54,6 +54,10 @@ const Home = () => {
     ? `${classes.headerWhite}`
     : `${classes.headerDark}`;
 
+  const switchTextClasses = toggle
+    ? ` ${classes.nowshowingTextDark}`
+    : `${classes.nowshowingTextWhite}`;
+
   return (
     <motion.div
       className={classes.container}
@@ -69,7 +73,7 @@ const Home = () => {
           initial="hidden"
           animate="visible"
         ></motion.p> */}
-        <p className={classes.nowshowingText}>NOW SHOWING</p>
+        <p className={switchTextClasses}>NOW SHOWING</p>
         <h1 className={switchHeaderClasses}>Shades of Mind</h1>
         <HomeParagraph />
       </div>

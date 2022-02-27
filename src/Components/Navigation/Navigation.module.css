@@ -53,6 +53,12 @@
     margin-left: 0rem;
     margin-right: 0rem;
   }
+  .whitenavbarbrand {
+    padding-left: 0.5rem;
+  }
+  .darknavbarbrand {
+    padding-left: 0.5rem;
+  }
 }
 @media (min-width: 320px) {
   .navbar {

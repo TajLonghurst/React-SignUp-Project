@@ -32,13 +32,14 @@ const AboutUsParagraph = () => {
       animate="visible"
     >
       <p className={switchClasses}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut
-        metus ac orci posuere accumsan sit amet non arcu. Praesent in odio at
-        nulla posuere elementum ut rhoncus diam. Vestibulum tristique nec ipsum
-        sed mollis. Curabitur feugiat malesuada neque. Suspendisse bibendum ante
-        eu lectus efficitur, et efficitur est vulputate. Cras pellentesque
-        dignissim dui, ac consectetur leo aliquam in. Etiam diam elit, tincidunt
-        ut nulla sed, vestibulum euismod dui.
+        Urban is a leading New Zealand art gallery representing some of the most
+        influential contemporary artists and estates from the past century.
+        Since its founding by Taj Longhurst in 2021, Urban has developed a
+        distinguished legacy as an artist-first establishment that mounts
+        seminal historical and contemporary exhibitions. Under the current
+        leadership of President and CEO Barry Goldfinger, Urban continues to
+        support its artists and share their visionary work with audiences
+        worldwide by remaining at the forefront of innovation.
       </p>
     </motion.div>
   );

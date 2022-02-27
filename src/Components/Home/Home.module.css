@@ -11,12 +11,19 @@
   text-align: center;
   padding: 1rem;
 }
-.nowshowingText {
+.nowshowingTextWhite {
   margin: 0rem;
   font-size: 13px;
   font-family: "Poppins-Bold";
   letter-spacing: 4px;
   color: rgb(175, 0, 0);
+}
+.nowshowingTextDark {
+  margin: 0rem;
+  font-size: 13px;
+  font-family: "Poppins-Bold";
+  letter-spacing: 4px;
+  color: #2c2c2c;
 }
 .headerDark {
   font-size: 3rem;
@@ -233,7 +240,7 @@
   .container {
     max-width: 100%;
     margin: 1rem;
-    margin-top: 20rem;
+    margin-top: 40%;
     margin-right: 10rem;
   }
   .headerDark {

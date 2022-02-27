@@ -20,12 +20,6 @@
   letter-spacing: 0px;
   transition: 2s;
 }
-.smallTextDark {
-  padding-left: 1rem;
-  margin: 0rem;
-  color: #000000cc;
-  transition: 2s;
-}
 .headerWhite {
   font-size: 3rem;
   margin: 0;
@@ -35,11 +29,22 @@
   letter-spacing: 0px;
   transition: 2s;
 }
-.smallTextWhite {
-  padding-left: 1rem;
+.locationTextWhite {
   margin: 0rem;
+  font-size: 13px;
+  font-family: "Poppins-Bold";
+  letter-spacing: 4px;
+  color: rgb(175, 0, 0);
+  padding-left: 1rem;
+}
+
+.locationTextDark {
+  margin: 0rem;
+  font-size: 13px;
+  font-family: "Poppins-Bold";
+  letter-spacing: 4px;
   color: #2c2c2c;
-  transition: 2s;
+  padding-left: 1rem;
 }
 
 @media (max-width: 320px) {
@@ -90,12 +95,14 @@
     width: 100%;
   }
   .headerDark {
-    font-size: 2rem;
+    font-size: 2.2rem;
     padding: 1rem;
+    padding-bottom: 0.4rem;
   }
   .headerWhite {
-    font-size: 2rem;
+    font-size: 2.2rem;
     padding: 1rem;
+    padding-bottom: 0.4rem;
   }
   .smallTextWhite {
     padding-left: 1rem;
@@ -123,21 +130,21 @@
     width: 90%;
   }
   .headerDark {
-    font-size: 2rem;
+    font-size: 3rem;
+    margin: 0;
     padding: 1rem;
-  }
-  .headerWhite {
-    font-size: 2rem;
-    padding: 1rem;
-  }
-  .smallTextWhite {
-    padding-left: 1rem;
-    margin: 0rem;
+    padding-bottom: 0rem;
+    font-family: "HALIMUN-REGULAR";
+    letter-spacing: 0px;
     transition: 2s;
   }
-  .smallTextDark {
-    padding-left: 1rem;
-    margin: 0rem;
+  .headerWhite {
+    font-size: 3rem;
+    margin: 0;
+    padding: 1rem;
+    padding-bottom: 0rem;
+    font-family: "HALIMUN-REGULAR";
+    letter-spacing: 0px;
     transition: 2s;
   }
 }
@@ -147,6 +154,24 @@
     margin: 1rem;
     margin-top: 10rem;
     margin-left: 4rem;
+  }
+  .headerDark {
+    font-size: 3rem;
+    margin: 0;
+    padding: 1rem;
+    padding-bottom: 0rem;
+    font-family: "HALIMUN-REGULAR";
+    letter-spacing: 0px;
+    transition: 2s;
+  }
+  .headerWhite {
+    font-size: 3rem;
+    margin: 0;
+    padding: 1rem;
+    padding-bottom: 0rem;
+    font-family: "HALIMUN-REGULAR";
+    letter-spacing: 0px;
+    transition: 2s;
   }
 }
 @media (min-width: 992px) {
@@ -164,22 +189,14 @@
     width: 70%;
   }
   .headerDark {
-    font-size: 2rem;
+    font-size: 3rem;
     padding: 1rem;
+    padding-bottom: 0rem;
   }
   .headerWhite {
-    font-size: 2rem;
+    font-size: 3rem;
     padding: 1rem;
-  }
-  .smallTextWhite {
-    padding-left: 1rem;
-    margin: 0rem;
-    transition: 2s;
-  }
-  .smallTextDark {
-    padding-left: 1rem;
-    margin: 0rem;
-    transition: 2s;
+    padding-bottom: 0rem;
   }
 }
 @media (min-width: 1200px) {
@@ -203,6 +220,7 @@
     font-family: "HALIMUN-REGULAR";
     letter-spacing: 0px;
     transition: 2s;
+    padding-bottom: 0rem;
   }
   .headerWhite {
     font-size: 3rem;
@@ -211,13 +229,14 @@
     font-family: "HALIMUN-REGULAR";
     letter-spacing: 0px;
     transition: 2s;
+    padding-bottom: 0rem;
   }
 }
 @media (min-width: 1400px) {
   .container {
     max-width: 100%;
     margin: 1rem;
-    margin-top: 14rem;
+    margin-top: 25%;
     margin-left: 7rem;
   }
   .headerDark {

@@ -47,13 +47,13 @@ const smallTextTranstion = {
 
 const AboutUs = () => {
   const toggle = useSelector((state) => state.ui.RegFormIsVisible);
-  const switchSmallTextClasses = toggle
-    ? `${classes.smallTextWhite}`
-    : `${classes.smallTextDark}`;
-
   const switchHeaderClasses = toggle
     ? `${classes.headerWhite}`
     : `${classes.headerDark}`;
+
+  const switchLocationClasses = toggle
+    ? `${classes.locationTextDark}`
+    : `${classes.locationTextWhite}`;
 
   return (
     <motion.div
@@ -65,12 +65,12 @@ const AboutUs = () => {
     >
       <div className={classes.cardBody}>
         <motion.p
-          className={switchSmallTextClasses}
+          className={switchLocationClasses}
           variants={smallTextTranstion}
           initial="hidden"
           animate="visible"
         >
-          Location
+          K'RD GALLERY
         </motion.p>
         <h1 className={switchHeaderClasses}>About us</h1>
         <AboutUsParagraph />
