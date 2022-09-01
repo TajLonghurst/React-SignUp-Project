@@ -4,7 +4,7 @@ import ImageRedLady from "../../Assets/Images/RedBlackHeadSWL.png";
 import { motion } from "framer-motion";
 import useWindowSize from "../../Hooks/use-windowSize";
 import "../../index.css";
-import AboutUs from "../AboutUsContent/AboutUs";
+import AboutUs from "../AboutUsContent/Aboutus";
 import classes from "./AboutUsHero.module.css";
 
 const pageTranstion = {
