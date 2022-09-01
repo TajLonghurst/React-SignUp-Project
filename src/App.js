@@ -3,7 +3,7 @@ import { Route, Routes, Navigate, useLocation } from "react-router-dom";
 import Navigation from "./Components/Navigation/Navigation";
 import { useSelector } from "react-redux";
 import Index from "./Pages/Index";
-import Aboutus from "./Pages/Aboutus";
+import Aboutus from "./Pages/AboutUs";
 import { RegForm } from "./Components/UI/Modals";
 import Profile from "./Pages/Profile";
 import { AnimatePresence } from "framer-motion";
