@@ -2,10 +2,10 @@ import { Fragment } from "react";
 // import ImageBlueLady from "../../Images/BlueWhiteHeadSWL.png";
 import ImageRedLady from "../../Assets/Images/RedBlackHeadSWL.png";
 import { motion } from "framer-motion";
-import classes from "./AboutUsHero.module.css";
 import useWindowSize from "../../Hooks/use-windowSize";
 import "../../index.css";
 import AboutUs from "../AboutUsContent/AboutUs";
+import classes from "./AboutUsHero.module.css";
 
 const pageTranstion = {
   hidden: {
