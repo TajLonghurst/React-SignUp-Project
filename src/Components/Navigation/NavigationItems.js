@@ -47,6 +47,11 @@ const NavigationItems = () => {
         </li>
       )}
       <li className={classes.navitem}>
+        <Link className={switchClasses} to="/">
+          Home
+        </Link>
+      </li>
+      <li className={classes.navitem}>
         <Link className={switchClasses} to="/AboutUs">
           About Us
         </Link>
