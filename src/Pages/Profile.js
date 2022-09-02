@@ -1,5 +1,15 @@
 const Profile = () => {
-  return <div>Profile</div>;
+  return (
+    <div
+      style={{
+        display: "flex",
+        aglinItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      Profile page
+    </div>
+  );
 };
 
 export default Profile;
