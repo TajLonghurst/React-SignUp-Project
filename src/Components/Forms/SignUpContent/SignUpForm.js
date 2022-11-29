@@ -81,9 +81,7 @@ const SignUpForm = (props) => {
             onChange={nameChangeHandler}
             hasError={entredNameHasError}
           />
-          <p className={nameInputHasError}>
-            Please do not leave this field blank
-          </p>
+          <p className={nameInputHasError}>Please do not leave this field blank</p>
           <Input
             autoComplete={"email"}
             type={"email"}
@@ -93,9 +91,7 @@ const SignUpForm = (props) => {
             onChange={emailChangeHandler}
             hasError={entredEmailHasError}
           />
-          <p className={emailInputHasError}>
-            Your email should be a proper email
-          </p>
+          <p className={emailInputHasError}>Your email should be a proper email</p>
           <Input
             autoComplete={"new-password"}
             type={"password"}
@@ -106,12 +102,11 @@ const SignUpForm = (props) => {
             hasError={entredPasswordHasError}
           />
           <p className={passwordInputHasError}>
-            Your password should contain a capatial letter a number and 8 or
-            more characters.
+            Your password should contain a capatial letter a number and 8 or more characters.
           </p>
           <Loader isLoading={props.isLoading} />
           <div className={classes.buttonContainer}>
-            <Button name={"sumbit"} type={"sumbit"} />
+            <Button name={"submit"} type={"submit"} />
           </div>
         </form>
       </div>
